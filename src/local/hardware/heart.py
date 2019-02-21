@@ -3,6 +3,7 @@ from threading import Thread
 
 class Heart(Thread):  # elated to be making this class on valentine's day ♥ uwu ♥
     def __init__(self, body, socket, server=('localhost', 8000)):
+        super(Heart, self).__init__()
         self.socket = socket
         self.server = server
         self.body = body

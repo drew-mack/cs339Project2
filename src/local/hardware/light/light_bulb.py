@@ -1,3 +1,4 @@
+import sys
 import socket
 sys.path.insert(0, './hardware')
 
@@ -41,6 +42,10 @@ class Bulb:
                     self.set_name(msg['object']['name'])
                     self.set_port(msg['object']['port'])
                     self.heart.start()
+
+            except KeyboardInterrupt:
+                print('exit request detected -- exiting.')
+                sys.exit(1)
 
 
     def j_summary(self):

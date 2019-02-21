@@ -43,7 +43,7 @@ class deviceManager:
                 print(self.objects)
                 self.client_socket.sendto(str(json_message).encode(), (self.server_address, 7999))
 
-            elif json_message['op'] == 'boot'
+            elif json_message['op'] == 'boot':
                 print('new object boot detected.')
                 new_name = self.new_default_name(json_message["object"]["type"])
                 next_port = self.next_port()
