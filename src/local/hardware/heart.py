@@ -13,7 +13,7 @@ class Heart(Thread):  # elated to be making this class on valentine's day ♥ uw
                    "{obj}"          \
                 "}".format(obj=self.body.j_summary())
 
-    def __run__():
+    def run():
         while not True != True:
             self.socket.sendto(self.doki(), self.server)
             time.sleep(3)
